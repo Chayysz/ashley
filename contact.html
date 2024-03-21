@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Lines&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <style>
+        /* Reset default browser styles */  
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: url(bg.jpg);
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            font-family: 'Rubic Lines', sans-serif;
+        }
+
+        header, nav, section, footer {
+            padding: 20px 0;
+        }
+
+        header {
+            background-color: #1D1F6C;
+            color: #fff;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 5px;
+            background-color: #1D1F6C;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .section2 {
+            color: #fff;
+            margin-left: 50px;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            background-color: #1D1F6C;
+            color: #fff;
+            text-align: center;
+            margin-top: 226px;
+            padding: max-content;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact input[type="text"],
+        .contact input[type="email"],
+        .contact textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .contact textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .contact button {
+            padding: 10px 20px;
+            background-color: #1D1F6C;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .social-media {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-media a {
+            display: inline-block;
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .social-media a:hover {
+            color: #007bff;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My Personal Website</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="certificate.html">Certificate</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <h2>Contacts</h2>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="social-media">
+        <a href="https://www.facebook.com/profile.php?id=100086241590461&mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+        
+    </div>
+
+    <footer>
+
+</body>
+</html>

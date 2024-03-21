@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Lines&display=swap" rel="stylesheet">
+    <style>
+        /* Reset default browser styles */  
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-position: 0%;
+    background: url(bg.jpg);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    font-family: Rubic Lines;
+}
+
+header, nav, section, footer {
+    padding: 20px 0;
+}
+
+header {
+    background-color: #1D1F6C;
+    color: #fff;
+    text-align: center;
+}
+
+nav {
+    margin-top: 5px;
+    background-color: #1D1F6C;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+        section {
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 0;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%; /* Adjust width as needed */
+            max-width: 800px; /* Limit maximum width */
+            max-height: 80%; /* Limit maximum height */
+            object-fit: contain;
+        }
+
+        .close {
+            color: #fff;
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #999;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .section#certi {
+            padding: 50px 20px;
+            background-color: transparent;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #certi h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #fff; /* Dark text color */
+        }
+
+        #certi p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #fff; /* Slightly darker text color */
+        }
+
+        .certificate-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+            gap: 20px;
+        }
+
+        .certificate-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .certificate-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .certificate-item:hover img {
+            transform: scale(1.1); /* Scale up on hover */
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            color: #fff; /* White text color */
+            padding: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .certificate-item:hover .overlay {
+            transform: translateY(0); /* Slide up overlay on hover */
+        }
+
+        footer {
+            background-color: #1D1F6C;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0; /* Adjust padding as needed */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My Personal Website</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="certificate.html">Certificate</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="certi" class="section">
+        <div class="container">
+            <h2>Certificate</h2>
+            <p>Explore my certificates!</p>
+            <div class="certificate-gallery">
+                <div class="certificate-item" onclick="openModal('certif1.jpg', 'Certificate 1')">
+                    <img src="h.jpg" alt="Certificate 1">
+                    <div class="overlay">
+                        <h3>Certificate 1</h3>
+                    </div>
+                </div>
+                <div class="certificate-item" onclick="openModal('certif2.jpg', 'Certificate 2')">
+                    <img src="j.jpg" alt="Certificate 2">
+                    <div class="overlay">
+                        <h3>Certificate 2</h3>
+                    </div>
+                </div>
+                <div class="certificate-item" onclick="openModal('certif3.jpg', 'Certificate 3')">
+                    <img src="u.jpg" alt="Certificate 3">
+                    <div class="overlay">
+                        <h3>Certificate 3</h3>
+                    </div>
+                </div>
+                <div class="certificate-item" onclick="openModal('certif4.jpg', 'Certificate 4')">
+                    <img src="p.jpg" alt="Certificate 4">
+                    <div class="overlay">
+                        <h3>Certificate 4</h3>
+                    </div>
+                </div>
+                
+                
+    
+
+                <!-- Add more certificate items as needed -->
+            </div>
+        </div>
+    </section>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Personal Website</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript functions for the lightbox/modal effect
+        function openModal(imageSrc, title) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modalImage");
+            var captionText = document.getElementById("caption");
+    
+            modal.style.display = "block";
+            modalImg.src = imageSrc;
+            captionText.innerHTML = '<h3>' + title + '</h3>';
+        }
+    
+        // Function to close the modal
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    
